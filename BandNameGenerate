@@ -21,8 +21,11 @@ public class BandNameGenerate {
         // 가장 최근에 먹은 메뉴를 입력 받아 lastFood에 저장하세요
         // pantColor와 lastFood를 합쳐 밴드 이름을 출력하세요
          */
-        System.out.println("밴드네임 생성기에 오신 것을 환영합니다.");
+       System.out.println("밴드네임 생성기에 오신 것을 환영합니다.");
         Scanner stdIn = new Scanner (System.in);
+        AsciiArt asciiArt = new AsciiArt();
+        asciiArt.printLogo(); //AsciiArt에 메서드 불러옴 
+
         System.out.println("지금 입은 하의 색깔은 무엇입니까?");
         String pantsColor = stdIn.next();
         System.out.println("가장 최근에 먹은 메뉴는 무엇입니까?");
