@@ -1,0 +1,74 @@
+package j08_메소드;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class method2 {
+
+    public static String getStar(int select, int n) {
+        String result = "";
+
+        if (select == 1) {
+            // 왼쪽으로 치우친 증가하는 별
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < i + 1; j++) {
+                    result += "*";
+                }
+                result += "\n";
+            }
+        } else if (select == 2) {
+            // 오른쪽으로 치우친 증가하는 별
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n - i - 1; j++) {
+                    result += " ";
+                }
+                for (int j = 0; j < i + 1; j++) {
+                    result += "*";
+                }
+                result += "\n";
+            }
+        } else if (select == 3) {
+            // 왼쪽으로 치우친 감소하는 별
+            for (int i = n; i > 0; i--) {
+                for (int j = 0; j < i; j++) {
+                    result += "*";
+                }
+                result += "\n";
+            }
+        } else if (select == 4) {
+            // 오른쪽으로 치우친 감소하는 별
+            for (int i = n; i > 0; i--) {
+                for (int j = 0; j < n - i; j++) {
+                    result += " ";
+                }
+                for (int j = 0; j < i; j++) {
+                    result += "*";
+                }
+                result += "\n";
+            }
+        } else {
+            result = "입력 오류입니다.";
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int rowOfStars = 0;
+        int choice = 0;
+
+        System.out.println("별의 줄수 입력");
+        rowOfStars = scanner.nextInt();
+
+        System.out.println("패턴을 선택하세요 (1: 왼쪽 증가, 2: 오른쪽 증가, 3: 왼쪽 감소, 4: 오른쪽 감소)");
+        choice = scanner.nextInt();
+
+        String result = getStar( choice, rowOfStars);
+        System.out.println("결과값");
+       // System.out.println(stars); 밑이랑 똑같음
+        System.out.println(result);
+
+
+    }
+}
