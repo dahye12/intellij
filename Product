@@ -1,0 +1,50 @@
+package j09_클래스;
+
+public class Product {
+
+/*
+새로운 클래스를 작성하고, 여러가지 생성자를 정의하세요
+기본 생성자
+매개변수 생성자
+
+void showInfo();
+ProductMain 생성자  showInfo() 실행해볼것
+
+쓰는 이유 : 학번이름 들 중에 누구한명의 점수를 알수잇고 누구를 추가하고싶으면 student s1 = new student();로 추가할수
+ */
+
+    int productNum ;
+    String productName;
+//기본생성자
+    Product() {
+        System.out.println("기본생성자");
+        this.productNum = 0;
+        this.productName = "몰라요"; //기본값을 몰라요로 초기화  -> 하지 않을 경우 데이터 입력이 없을 경우 null 로 출력
+    }
+//매개변수 생성자
+    Product(int pizza){
+        System.out.println("int 매개변수가 필요한 생성자 ");
+        this.productNum = pizza;
+        this.productName = "몰라요";
+    }
+
+    Product(String chicken){
+        System.out.println("String  매개변수가 필요한 생성자 ");
+        this.productNum = 0;
+        this.productName = chicken;
+
+
+    }
+    Product(int pizza, String chicken){
+        System.out.println("전체생성자");
+        this.productNum = pizza;
+        this.productName = chicken;
+
+    }
+
+    void showInfo(){
+        System.out.println("product 정보를 가져옵시다");
+        System.out.println("ProductNum : " + productNum);
+        System.out.println("ProductName : " + productName);
+    }
+}
