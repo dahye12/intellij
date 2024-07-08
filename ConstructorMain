@@ -1,0 +1,17 @@
+package j09_클래스;
+
+public class ConstructorMain {
+    public static void main(String[] args) {
+       Constructor c1 = new Constructor();  //클래스명 객체명 새로생겻다 괄호열고닫고는생성자
+       c1.showInfo();
+
+
+       Constructor c2 = new Constructor();
+        c2.showInfo();
+        c2. name = "박다혜";
+        c2.showInfo();
+
+        Constructor c3 = new Constructor(10, "박다혜");
+        c3.showInfo();
+    }
+}
