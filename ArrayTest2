@@ -43,7 +43,7 @@ public class ArrayTest2 {
 
        name = new String[count]; //count 개수로 초기화
 
-        for(int i =0; i< count; i++){
+        for(int i =0; i< count; i++){         //여기서 count는 name.length랑 같음 
             System.out.println((i+1) + "번 이름 : ");
             name[i] = stdIn.nextLine();
         }
